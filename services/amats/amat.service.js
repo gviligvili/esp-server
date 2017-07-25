@@ -15,6 +15,8 @@ function getAmats() {
 		.on('json', (rowObject) => {
 		rowObject.lat = Number(rowObject.lat);
 	rowObject.lon = Number(rowObject.lon);
+	rowObject.radius_small = Number(rowObject.radius_small);
+	rowObject.radius_big = Number(rowObject.radius_big);
 	amats.push(rowObject);
 })
 .on('done', (error) => {
@@ -22,7 +24,7 @@ function getAmats() {
 			console.error(error.message);
 			reject(error)
 		} else {
-			resolve(targets)
+			resolve(amats)
 		}
 		console.log('csv file reading ended')
 })
