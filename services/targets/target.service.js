@@ -3,7 +3,7 @@
  */
 const csv = require('csvtojson');
 const path = require('path');
-const csvFilePath = path.join(__dirname, 'harta.csv');
+const csvFilePath = path.join(__dirname, 'targets.csv');
 
 function getTargets() {
     return new Promise((resolve, reject) => {
