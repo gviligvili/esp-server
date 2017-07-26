@@ -9,6 +9,7 @@ var cors = require('cors')
 var index = require('./routes/index');
 var users = require('./routes/users.routes');
 var targets = require('./routes/targets.routes');
+var remarks = require('./routes/remarks.routes');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/targets', targets);
+app.use('/remarks', remarks);
 
 
 
