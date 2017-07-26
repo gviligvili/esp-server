@@ -10,6 +10,7 @@ var index = require('./routes/index');
 var users = require('./routes/users.routes');
 var targets = require('./routes/targets.routes');
 var remarks = require('./routes/remarks.routes');
+var amats = require('./routes/amats.routes');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/targets', targets);
 app.use('/remarks', remarks);
+app.use('/amats', amats);
 
 
 
